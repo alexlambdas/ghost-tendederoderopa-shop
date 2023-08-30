@@ -1,0 +1,72 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+
+{{#post}}
+{{!-- Everything inside the #post block pulls data from the post --}}
+
+<main id="idCustomPostSiteMain">
+<article>
+
+    <section id="idCustomPostInfo">
+
+        <header class="article-header">
+
+            <div class="article-tag post-card-tags">
+                {{#primary_tag}}
+                    <span class="post-card-primary-tag">Vende Amazon</span>
+                {{/primary_tag}}
+            </div>
+
+            <h1 class="article-title">{{title}}</h1>
+
+            <div class="article-byline">
+            <section class="article-byline-content">
+
+                <ul class="author-list">
+                    {{#foreach authors}}
+                    <li class="author-list-item">
+                        {{#if profile_image}}
+                        <div class="author-avatar">
+                            <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                        </div>
+                        {{else}}
+                        <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                        {{/if}}
+                    </li>
+                    {{/foreach}}
+                </ul>
+
+                <div class="article-byline-meta">
+                    {{#foreach authors}}
+                    <h4 class="author-name author-color">{{name}}</h4>
+                    {{/foreach}}
+                    <div class="byline-meta-content">
+                        <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                        {{#if reading_time}}
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
+                        {{/if}}
+                    </div>
+                </div>
+
+            </section>
+            </div>
+
+        </header>
+
+        <section id="idPostContent" class="gh-content">
+            {{content}}
+        </section>
+
+    </section>
+    
+    <section id="idCustomPostProduct"></section>
+
+</article>
+</main>
+
+{{/post}}
+
+<script src="{{asset "js/custom/custom-post-product.js"}}"></script>

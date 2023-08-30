@@ -1,0 +1,148 @@
+/** 
+
+variables
+
+*/
+
+:root{
+  --image-landing-height-mobile: 40vh;
+  --image-landing-height-normal: 30vh
+}
+
+/**
+
+*/
+#idCustomLandingPage,
+#idCustomLandingPage > article,
+#idCustomLandingPage > article > header,
+#idCustomLandingPage > article > header > div,
+#idCustomLandingPage > article > header > div > figure {
+  width: 100%;
+  padding: 0 !important;
+}
+
+#idCustomLandingPage > article > header{
+  height: var(--image-landing-height-mobile);
+}
+
+#idCustomLandingPage > article > header > div{
+  position: relative;
+}
+
+#idCustomLandingPage > article > header > div > div{
+  position: absolute;
+  z-index: 14;
+  width: 100%;
+  height: var(--image-landing-height-mobile);
+  background-color: var(--ghost-accent-color);
+  opacity: 0.4;
+}
+
+#idCustomLandingPage > article > header > div > h1{
+  position: absolute;
+  z-index: 15;
+  padding: 12px;
+  background: var(--ghost-accent-color);
+  border-radius: 5px;
+  border: 1px solid white;
+  text-align: center;
+  margin-top: 10vh;
+  width: 90%;
+}
+
+#idCustomLandingPage > article > header > div > figure {
+  position: absolute;
+  height: var(--image-landing-height-mobile);
+}
+
+#idCustomLandingPage > article > header > div > figure > img{
+  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/**
+
+*/
+@media (min-width: 992px) and (max-width: 1200px){
+ 
+  #idCustomLandingPage > article > section{
+    width: 90%;
+    margin: auto;
+    padding-top: 35px;
+  }
+
+  #idCustomLandingPage > article > header{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > div{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > figure {
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > h1{
+    width: auto;
+  }
+  
+}
+
+/**
+
+*/
+@media (min-width: 1201px) and (max-width: 1400px){
+  
+  #idCustomLandingPage > article > section{
+    width: 80%;
+    margin: auto;
+    padding-top: 35px;
+  }
+
+  #idCustomLandingPage > article > header{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > div{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > figure {
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > h1{
+    width: auto;
+  }
+}
+
+/**
+
+*/
+@media (min-width: 1401px){
+
+  #idCustomLandingPage > article > section{
+    width: 65%;
+    margin: auto;
+  }
+
+  #idCustomLandingPage > article > header{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > div{
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > figure {
+    position: absolute;
+    height: var(--image-landing-height-normal);
+  }
+
+  #idCustomLandingPage > article > header > div > h1{
+    width: auto;
+  }
+}
